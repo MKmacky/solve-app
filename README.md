@@ -1,24 +1,55 @@
-# README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## users テーブル
 
-Things you may want to cover:
+| Column   | Type   | Options     |
+| -------- | ------ | ----------- |
+| name     | string | null: false |
+| email    | string | null: false |
+| password | string | null: false |
+| age      | string | null: false |
+| position | string | null: false |
 
-* Ruby version
+### Association
 
-* System dependencies
+- has_many :problem_users
+- has_many :problems, through: problem_users
+- has_many :comments
 
-* Configuration
+## problems テーブル
 
-* Database creation
+| Column  | Type   | Options     |
+| ------  | ------ | ----------- |
+| title   | string | null: false |
+| content | string | null: false |
 
-* Database initialization
+### Association
 
-* How to run the test suite
+- has_many :problem_users
+- has_many :users, through: problem_users
+- has_many :comments
 
-* Services (job queues, cache servers, search engines, etc.)
+## problem_users テーブル
 
-* Deployment instructions
+| Column  | Type       | Options                        |
+| ------  | ---------- | ------------------------------ |
+| user    | references | null: false, foreign_key: true |
+| problem | references | null: false, foreign_key: true |
 
-* ...
+### Association
+
+- belongs_to :problem
+- belongs_to :user
+
+## comments テーブル
+
+| Column   | Type       | Options                        |
+| -------  | ---------- | ------------------------------ |
+| solution | string     |                                |
+| user     | references | null: false, foreign_key: true |
+| room     | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :problem
+- belongs_to :user
