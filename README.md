@@ -7,6 +7,7 @@
 | name     | string | null: false |
 | email    | string | null: false |
 | password | string | null: false |
+| gender   | string | null: false |
 | age      | string | null: false |
 | position | string | null: false |
 
