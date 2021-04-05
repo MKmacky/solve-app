@@ -20,7 +20,7 @@ class ProblemsController < ApplicationController
   private
 
   def problem_params
-    params.require(:problem).permit(:title, :content)
+    params.require(:problem).permit(:title, :content).merge(user_id: current_user.id)
   end
 
 end

@@ -1,7 +1,7 @@
 class Problem < ApplicationRecord
-  has_many :problem_users
-  has_many :users, through: :problem_users
+  belongs_to :user
 
   validates :title,   presence: true
   validates :content, presence: true
+  
 end

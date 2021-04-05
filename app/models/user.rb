@@ -10,8 +10,7 @@ class User < ApplicationRecord
   validates :age_id,      numericality: { other_than: 0 }
   validates :position_id, numericality: { other_than: 0 }
 
-  has_many :problem_users
-  has_many :rooms, through: :problem_users
+  has_many :problems
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :age
   belongs_to :position
