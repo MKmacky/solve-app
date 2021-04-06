@@ -18,7 +18,9 @@ class ProblemsController < ApplicationController
   end
 
   def show
-    
+    @problem = Problem.find(params[:id])
+    @comment = Comment.new
+    @comments = @problem.comments.includes(:user)
   end
 
   private

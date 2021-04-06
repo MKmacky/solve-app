@@ -49,14 +49,17 @@
     </div>
   </div>
 </div>
-
-<%= form_with model: [@problem, @comment], class: 'form', local: true do |f| %>
-  <div class="form-input">
-    <%= f.text_field :content, class: 'form-message', placeholder: 'コメントする' %>
-    <label class="form-image">
-      <span class="image-file">画像</span>
-      <%= f.file_field :image, class: 'hidden' %>
-    </label>
-  </div>
-  <%= f.submit '送信', class: 'form-submit' %>
-<% end %>
+<% if user_signed_in? %>
+  <%= form_with model: [@problem, @comment], class: 'form', local: true do |f| %>
+    <div class="form-input">
+      <%= f.text_field :solution, class: 'form-message', placeholder: 'コメントする' %>
+      <label class="form-image">
+        <span class="image-file">画像</span>
+        <%= f.file_field :image, class: 'hidden' %>
+      </label>
+    </div>
+    <%= f.submit '送信', class: 'form-submit' %>
+  <% end %>
+<%else%>
+  <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
+<%end%>

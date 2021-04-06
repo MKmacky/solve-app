@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   root to: "problems#index"
   resources :users, only: [:edit, :update]
   resources :problems, only: [:index, :new, :create, :show] do
-    resources :comments, only: [:index, :create]
+    resources :comments, only: [:create]
   end
 end
