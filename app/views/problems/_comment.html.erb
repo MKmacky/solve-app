@@ -4,7 +4,7 @@
       <%= comment.user.name %>
     </div>
     <div class="message-date">
-      <%= l comment.created_at %>
+      <%= comment.created_at.strftime('%Y/%m/%d %H:%M') %>
     </div>
   </div>
   <div class="lower-message">

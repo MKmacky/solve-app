@@ -16,13 +16,13 @@
 }
 
 .header-name a{
-  font-size: 16px;
+  font-size: 20px;
   color: deepskyblue;
   text-decoration: none;
 }
 
 .create-room a {
-  font-size: 10px;
+  font-size: 15px;
   border: 1px solid deepskyblue;
   padding: 14px;
   color: deepskyblue;
@@ -41,8 +41,9 @@
 }
 
 .room-name a {
+  font-size: 20px;
   text-decoration: none;
-  color: purple;
+  color: darkorange;
 }
 
 .chat {
@@ -58,8 +59,14 @@
   background-color: lightblue;
 }
 
-.header-title {
+.title {
   color: darkviolet;
+  font-size: 24px;
+  margin-top: 36px;
+}
+
+.header-title {
+  color: darkorange;
   font-size: 24px;
   margin-top: 36px;
 }
@@ -75,10 +82,16 @@
   padding: 20px;
 }
 
+.problem-content {
+  height: 100px;
+  padding: 10px;
+  background-color: whitesmoke;
+}
+
 .messages {
   background-color: #FAFAFA;
-  height: calc(100vh - 100px - 90px);
-  padding: 46px 40px 0;
+  height: calc(100vh - 100px - 100px - 90px);
+  padding: 30px 40px 0;
   overflow: scroll;
 }
 
