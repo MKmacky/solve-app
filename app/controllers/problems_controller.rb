@@ -23,6 +23,13 @@ class ProblemsController < ApplicationController
     @comments = @problem.comments.includes(:user)
   end
 
+  def destroy
+    problem = Problem.find(params[:id])
+    problem.destroy
+    redirect_to root_path
+  end
+
+
   private
 
   def problem_params

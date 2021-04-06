@@ -5,13 +5,21 @@
   <div class="chat">
     <div class="chat-header">
       <div class="left-header">
-        <div class="header-title">
+        <div class="title">
           〜お悩み相談室〜
         </div>
       </div>
     </div>
-    <div class="messages">
-      
+    <div class="top-messages">
+      <div class="top-page">＜お悩み一覧＞</div>
+      <% @problems.each do |problem| %>
+        <div class="room">
+          <div class="room-name">
+            <%= link_to problem.title, problem_path(problem.id) %>　　
+            <%= problem.user.name %>
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>

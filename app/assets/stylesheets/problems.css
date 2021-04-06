@@ -32,7 +32,7 @@
 .rooms {
   background-color: lightblue;
   height: calc(100vh - 100px);
-  padding: 0 20px;
+  padding: 10px 50px;
   overflow: scroll;
 }
 
@@ -40,7 +40,7 @@
   padding: 20px 0 40px;
 }
 
-.room-name a {
+.room-name  {
   font-size: 20px;
   text-decoration: none;
   color: darkorange;
@@ -83,14 +83,29 @@
 }
 
 .problem-content {
-  height: 100px;
+  height: 130px;
   padding: 10px;
   background-color: whitesmoke;
 }
 
 .messages {
   background-color: #FAFAFA;
-  height: calc(100vh - 100px - 100px - 90px);
+  height: calc(100vh - 100px - 130px - 90px);
+  padding: 30px 40px 0;
+  overflow: scroll;
+}
+
+.top-page {
+  letter-spacing: 2px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: lightgreen;
+}
+
+.top-messages {
+  background-color: #FAFAFA;
+  height: calc(100vh - 100px);
   padding: 30px 40px 0;
   overflow: scroll;
 }
