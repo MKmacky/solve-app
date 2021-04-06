@@ -15,5 +15,4 @@ class User < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :age
   belongs_to :position
-
 end

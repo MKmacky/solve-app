@@ -1,4 +1,4 @@
-class Position< ActiveHash::Base
+class Position < ActiveHash::Base
   self.data = [
     { id: 0, name: '--' },
     { id: 1, name: '小学生' },
@@ -16,5 +16,4 @@ class Position< ActiveHash::Base
 
   include ActiveHash::Associations
   has_many :users
-  
-  end
+end

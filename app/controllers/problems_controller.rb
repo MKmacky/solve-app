@@ -1,5 +1,4 @@
 class ProblemsController < ApplicationController
-
   def index
     @problems = Problem.all.order(created_at: :desc)
   end
@@ -29,11 +28,9 @@ class ProblemsController < ApplicationController
     redirect_to root_path
   end
 
-
   private
 
   def problem_params
     params.require(:problem).permit(:title, :content).merge(user_id: current_user.id)
   end
-
 end
