@@ -11,6 +11,6 @@
     <div class="message-content">
       <%= comment.solution %>
     </div>
-    <%= image_tag comment.image.variant(resize: '500x500'), class: 'message-image' if message.image.attached? %>
+    <%= image_tag comment.image.variant(resize: '500x500'), class: 'message-image' if comment.image.attached? %>
   </div>
 </div>
