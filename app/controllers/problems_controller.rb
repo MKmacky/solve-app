@@ -17,6 +17,10 @@ class ProblemsController < ApplicationController
     end
   end
 
+  def show
+    
+  end
+
   private
 
   def problem_params
