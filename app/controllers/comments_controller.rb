@@ -8,6 +8,6 @@ class CommentsController < ApplicationController
   private
 
   def comment_params
-    params.require(:comment).permit(:solution).merge(user_id: current_user.id, problem_id: params[:problem_id])
+    params.require(:comment).permit(:solution, :image).merge(user_id: current_user.id, problem_id: params[:problem_id])
   end
 end
