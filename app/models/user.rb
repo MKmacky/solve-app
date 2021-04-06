@@ -11,6 +11,7 @@ class User < ApplicationRecord
   validates :position_id, numericality: { other_than: 0 }
 
   has_many :problems
+  has_many :comments
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :age
   belongs_to :position
