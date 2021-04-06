@@ -16,13 +16,13 @@
 }
 
 .header-name a{
-  font-size: 16px;
+  font-size: 20px;
   color: deepskyblue;
   text-decoration: none;
 }
 
 .create-room a {
-  font-size: 10px;
+  font-size: 15px;
   border: 1px solid deepskyblue;
   padding: 14px;
   color: deepskyblue;
@@ -32,7 +32,7 @@
 .rooms {
   background-color: lightblue;
   height: calc(100vh - 100px);
-  padding: 0 20px;
+  padding: 10px 50px;
   overflow: scroll;
 }
 
@@ -40,9 +40,10 @@
   padding: 20px 0 40px;
 }
 
-.room-name a {
+.room-name  {
+  font-size: 20px;
   text-decoration: none;
-  color: purple;
+  color: darkorange;
 }
 
 .chat {
@@ -58,8 +59,14 @@
   background-color: lightblue;
 }
 
-.header-title {
+.title {
   color: darkviolet;
+  font-size: 24px;
+  margin-top: 36px;
+}
+
+.header-title {
+  color: darkorange;
   font-size: 24px;
   margin-top: 36px;
 }
@@ -75,10 +82,61 @@
   padding: 20px;
 }
 
+.problem-content {
+  height: 130px;
+  padding: 10px;
+  background-color: whitesmoke;
+}
+
 .messages {
   background-color: #FAFAFA;
-  height: calc(100vh - 100px - 90px);
-  padding: 46px 40px 0;
+  height: calc(100vh - 100px - 130px - 90px);
+  padding: 30px 40px 0;
+  overflow: scroll;
+}
+
+.top-page {
+  letter-spacing: 2px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: lightgreen;
+}
+
+.top-messages {
+  background-color: #FAFAFA;
+  height: calc(100vh - 100px);
+  padding: 30px 40px 0;
+  overflow: scroll;
+}
+
+.message {
+  margin: 10px 0 0 0;
+}
+
+.upper-message{
+  display: flex;
+}
+
+.message-user {
+  color: #434a54;
+  font-size: 16px;
+}
+
+.message-date {
+  color: #999;
+  font-size: 12px;
+  padding-left: 10px;
+}
+
+.lower-message {
+  margin-top: 10px;
+}
+
+.message-content {
+  color: #434a54;
+  font-size: 14px;
+  margin-bottom: 40px;
 }
 
 .form {

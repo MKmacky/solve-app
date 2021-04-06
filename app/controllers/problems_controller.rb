@@ -17,6 +17,19 @@ class ProblemsController < ApplicationController
     end
   end
 
+  def show
+    @problem = Problem.find(params[:id])
+    @comment = Comment.new
+    @comments = @problem.comments.includes(:user)
+  end
+
+  def destroy
+    problem = Problem.find(params[:id])
+    problem.destroy
+    redirect_to root_path
+  end
+
+
   private
 
   def problem_params
