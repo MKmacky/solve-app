@@ -46,7 +46,7 @@
 
 | Column   | Type       | Options                        |
 | -------  | ---------- | ------------------------------ |
-| solution | string     |                                |
+| solution | text       |                                |
 | user     | references | null: false, foreign_key: true |
 | room     | references | null: false, foreign_key: true |
 
