@@ -6,7 +6,8 @@
   </div>
   <div class="left-header">
     <div class="header-title">
-      <h1>タイトル：<%= @problem.title %></h1>
+      タイトル：<%= @problem.title %>　　
+      <%= link_to @problem.user.name, user_path(@problem.user) %>さんのお悩み
     </div>
   </div>
   <div class="right-header">
@@ -19,6 +20,7 @@
 </div>
 
 <div class="problem-content">
+  <p>カテゴリー：　<%= @problem.category.name %></p>
   <p>相談内容：</p>
   <%= @problem.content %>
 </div>

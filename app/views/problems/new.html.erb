@@ -10,6 +10,12 @@
       </div>
     </div>
     <div class='chat-room-form__field'>
+    <div class='chat-room-form__field--left'>
+        <%= f.label :カテゴリー, class: 'chat-room-form__label'%>
+      </div>
+      <div class='chat-room-form__field--right'>
+        <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"genre-select"}) %>
+      </div>
     </div>
     <div class='chat-room-form__field'>
       <div class='chat-room-form__field--left'>
