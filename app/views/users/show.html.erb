@@ -1,0 +1,35 @@
+<div class='account-page' id='account-page'>
+  <div class='account-page__inner clearfix'>
+    <div class='account-page__inner--left account-page__header'>
+      <h2>Show Account</h2>
+      <h5>ユーザー詳細</h5>
+      <%= link_to "トップページに戻る", root_path, class: 'btn'%>
+    </div>
+    <div class='account-page__inner--right user-form'>
+        <div class='field'>
+          <div class='field-label'>
+            <h1>名前：　<%= @user.name %></h1>
+          </div>
+          <div class='field-input'>
+          </div>
+        </div>
+        <div class='field'>
+          <div class='field-label'>
+            <h1>性別：　<%= @user.gender %></h1>
+          </div>
+        </div>
+        <div class='field'>
+          <div class='field-label'>
+            <h1>年代：　<%= @user.age.name %></h1>
+          </div>
+        </div>
+        <div class='field'>
+          <div class='field-label'>
+            <h1>肩書き：　<%= @user.position.name %></h1>
+          </div>
+        </div>
+        <div class='actions'>
+        </div>
+    </div>
+  </div>
+</div>

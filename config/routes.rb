@@ -4,9 +4,9 @@ Rails.application.routes.draw do
   
   root to: "problems#index"
 
-  resources :users, only: [:edit, :update]
+  resources :users, only: [:edit, :update, :show]
   resources :problems, only: [:index, :new, :create, :show, :destroy] do
     resources :comments, only: [:create]
   end
-  
+
 end

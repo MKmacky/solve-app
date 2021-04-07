@@ -6,7 +6,7 @@
     <div class="chat-header">
       <div class="left-header">
         <div class="title">
-          〜お悩み相談室〜
+          <%= link_to "〜お悩み相談室〜", root_path %> 
         </div>
       </div>
     </div>
@@ -14,9 +14,9 @@
       <div class="top-page">＜お悩み一覧＞</div>
       <% @problems.each do |problem| %>
         <div class="room">
-          <div class="room-name">
-            <%= link_to problem.title, problem_path(problem.id) %>　　
-            <%= problem.user.name %>
+          <div class="rooms-name">
+            ⚫︎　<%= link_to problem.title, problem_path(problem.id) %>　　
+            <%= link_to problem.user.name, user_path(problem.user) %>
           </div>
         </div>
       <% end %>
