@@ -1,7 +1,7 @@
 <div class="chat-header">
   <div class="left-header">
     <div class="title">
-      <%= link_to "〜お悩み相談〜", root_path %> 
+      <%= link_to "〜お悩み相談室〜", root_path %> 
     </div>
   </div>
   <div class="left-header">
@@ -19,7 +19,8 @@
 </div>
 
 <div class="problem-content">
-  内容：<%= @problem.content %>
+  <p>相談内容：</p>
+  <%= @problem.content %>
 </div>
 
 <div class="messages">

@@ -8,31 +8,37 @@
 }
 .side-bar-header {
   height: 100px;
-  padding: 0 20px;
-  background-color: lemonchiffon;
+  padding: 0 20px 0 40px;
+  background-color: darkorange;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .header-name a{
-  font-size: 20px;
-  color: deepskyblue;
+  font-size: 25px;
+  color: white;
   text-decoration: none;
 }
 
 .create-room a {
-  font-size: 15px;
-  border: 1px solid deepskyblue;
-  padding: 14px;
-  color: deepskyblue;
-  text-decoration: none;
+  display: inline-block;
+  padding: 12px 20px;
+  color: #fff;
+  background-color: #38aef0;
+  border: 0;
+}
+
+.my-problem{
+  text-align: center;
+  font-size: 20px;
+  color: white;
 }
 
 .rooms {
-  background-color: lightblue;
+  background-color: rgb(253, 170, 69);
   height: calc(100vh - 100px);
-  padding: 10px 50px;
+  padding: 50px 40px;
   overflow: scroll;
 }
 
@@ -40,10 +46,22 @@
   padding: 20px 0 40px;
 }
 
-.room-name  {
+.room-name{
   font-size: 20px;
-  text-decoration: none;
-  color: darkorange;
+  color: deepskyblue;
+}
+
+.room-name  a{
+  color: white;
+}
+
+.rooms-name{
+  color: dimgrey;
+}
+
+.rooms-name  a{
+  font-size: 20px;
+  color: dimgray;
 }
 
 .chat {
@@ -53,20 +71,23 @@
 
 .chat-header {
   height: 100px;
-  padding: 0 40px;
+  padding: 0 60px;
   display: flex;
   justify-content: space-between;
-  background-color: lightblue;
+  background-color: rgb(250, 146, 19);
 }
 
 .title {
-  color: darkviolet;
   font-size: 24px;
   margin-top: 36px;
 }
 
+.title a{
+  color: white;
+}
+
 .header-title {
-  color: darkorange;
+  color: white;
   font-size: 24px;
   margin-top: 36px;
 }
@@ -77,19 +98,20 @@
 
 .header-button a {
   text-decoration: none;
-  border: 1px solid darkred;
-  color: darkred;
   padding: 20px;
+  color: #fff;
+  background-color: #38aef0;
+  border: 0;
 }
 
 .problem-content {
   height: 130px;
   padding: 10px;
-  background-color: whitesmoke;
+  background-color:#FAFAFA;
 }
 
 .messages {
-  background-color: #FAFAFA;
+  background-color:white;
   height: calc(100vh - 100px - 130px - 90px);
   padding: 30px 40px 0;
   overflow: scroll;
@@ -97,16 +119,16 @@
 
 .top-page {
   letter-spacing: 2px;
-  font-size: 24px;
+  font-size: 27px;
   font-weight: bold;
   text-align: center;
-  color: lightgreen;
+  color: darkorange;
 }
 
 .top-messages {
-  background-color: #FAFAFA;
+  background-color: white;
   height: calc(100vh - 100px);
-  padding: 30px 40px 0;
+  padding: 30px 200px 0;
   overflow: scroll;
 }
 
@@ -160,7 +182,7 @@
 }
 
 .form-submit {
-  background-color: #38AEF0;
+  background-color: #10a1f5;
   border: none;
   color: white;
   font-size: 16px;

@@ -11,6 +11,7 @@
         <div class='field'>
           <div class='field-label'>
             <%= f.label :name%>
+            <i>名前</i>
           </div>
           <div class='field-input'>
             <%= f.text_field :name, autofocus: true %>
@@ -37,7 +38,7 @@
         <div class='field'>
           <div class='field-label'>
             <%= f.label :age %>
-            <i>年齢</i>
+            <i>年代</i>
           </div>
           <%= f.collection_select(:age_id, Age.all, :id, :name, {}, {class:"genre-select"}) %>
         </div>
