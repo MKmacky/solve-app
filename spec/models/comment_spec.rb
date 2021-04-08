@@ -4,7 +4,7 @@ RSpec.describe Comment, type: :model do
   before do
     @comment = FactoryBot.build(:comment)
   end
-  
+
   describe 'コメント投稿' do
     context 'コメント投稿できる' do
       it 'contentとimageが存在していれば保存できること' do

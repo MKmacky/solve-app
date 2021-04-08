@@ -4,19 +4,15 @@ RSpec.describe Problem, type: :model do
   before do
     @problem = FactoryBot.build(:problem)
   end
-  
-  describe 'お悩み投稿' do
-    
-    context '投稿できるとき' do
 
+  describe 'お悩み投稿' do
+    context '投稿できるとき' do
       it 'すべて存在すれば登録できる' do
         expect(@problem).to be_valid
       end
-
     end
 
     context '投稿できないとき' do
-
       it 'titleが空では登録できない' do
         @problem.title = ''
         @problem.valid?
@@ -32,9 +28,8 @@ RSpec.describe Problem, type: :model do
       it 'category_idが0なら登録できない' do
         @problem.category_id = 0
         @problem.valid?
-        expect(@problem.errors.full_messages).to include("Category must be other than 0")
+        expect(@problem.errors.full_messages).to include('Category must be other than 0')
       end
-
     end
   end
 end

@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :comment do
-    solution {Faker::Lorem.sentence}
+    solution { Faker::Lorem.sentence }
     association :user
     association :problem
     after(:build) do |comment|

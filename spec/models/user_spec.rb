@@ -23,7 +23,7 @@ RSpec.describe User, type: :model do
         expect(@user).to be_valid
       end
     end
-    
+
     context '新規投稿できないとき' do
       it 'nameが空では登録できない' do
         @user.name = ''
@@ -53,7 +53,7 @@ RSpec.describe User, type: :model do
       it 'passwordが数字のみでは登録できない' do
         @user.password = '123456789'
         @user.valid?
-        expect(@user.errors.full_messages).to include("Password confirmation doesn't match Password", "Password is invalid")
+        expect(@user.errors.full_messages).to include("Password confirmation doesn't match Password", 'Password is invalid')
       end
 
       it 'passwordが8文字以下なら登録できない' do
@@ -71,13 +71,13 @@ RSpec.describe User, type: :model do
       it 'age_idが0では登録できない' do
         @user.age_id = 0
         @user.valid?
-        expect(@user.errors.full_messages).to include("Age must be other than 0")
+        expect(@user.errors.full_messages).to include('Age must be other than 0')
       end
 
       it 'position_idが0では登録できない' do
         @user.position_id = 0
         @user.valid?
-        expect(@user.errors.full_messages).to include("Position must be other than 0")
+        expect(@user.errors.full_messages).to include('Position must be other than 0')
       end
     end
   end
