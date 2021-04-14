@@ -17,13 +17,17 @@
         <%= f.collection_select(:category_id_eq,Category.all,:id,:name,{},{class:'search-category'}) %>
         <%= f.submit '検索', class:'search-form-submit'%>
       <% end %>
-      <% @problems.each do |problem| %>
-        <div class="room">
-          <div class="rooms-name">
-            ⚫︎　<%= link_to problem.title, problem_path(problem.id) %>　　
-            <%= link_to problem.user.name, user_path(problem.user) %>
+      <% if @results.length !=0 %>
+        <% @results.each do |result| %>
+          <div class="room">
+            <div class="rooms-name">
+              ⚫︎　<%= link_to result.title, problem_path(result.id) %>　　
+              <%= link_to result.user.name, user_path(result.user) %>
+            </div>
           </div>
-        </div>
+        <% end %>
+      <% else %>
+        <div class="no-category">※該当するお悩みはありません</div>
       <% end %>
     </div>
   </div>
