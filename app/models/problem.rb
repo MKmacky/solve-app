@@ -7,4 +7,5 @@ class Problem < ApplicationRecord
   validates :title,   presence: true
   validates :content, presence: true
   validates :category_id, numericality: { other_than: 0 }
+  
 end

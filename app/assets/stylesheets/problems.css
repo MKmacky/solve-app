@@ -104,11 +104,31 @@
   border: 0;
 }
 
+.search-form {
+  padding: 25px;
+  text-align: center;
+}
+
+.search-title {
+  font-size: 18px;
+  color: darkorange;
+  font-weight: bold;
+}
+
+.search-category {
+  width: 180px;
+  height: 25px
+}
+
 .problem-content {
   height: 130px;
   padding: 10px;
   background-color:#FAFAFA;
   color: dimgray;
+}
+
+.problem-content p {
+  padding: 3px;
 }
 
 .messages {
@@ -192,6 +212,16 @@
   padding: 0 20px;
 }
 
+.search-form-submit {
+  background-color: #10a1f5;
+  border: none;
+  color: white;
+  font-size: 12px;
+  height: 28px;
+  margin-left: 5px;
+  padding: 0 15px;
+}
+
 .form-image {
   font-size: 12px;
   background-color: lightblue;
@@ -204,4 +234,10 @@
 
 .hidden {
   display: none;
+}
+
+.no-category {
+  font-size: 20px;
+  text-align: center;
+  margin: 30px;
 }
