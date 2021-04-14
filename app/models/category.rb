@@ -12,4 +12,8 @@ class Category < ActiveHash::Base
 
   include ActiveHash::Associations
   has_many :problems
+
+  def self.ransackable_associations(auth_object = nil)
+    %w[name]
+  end
 end
