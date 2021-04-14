@@ -14,7 +14,7 @@ class Category < ActiveHash::Base
   has_many :problems
 
   def self.ransackable_attributes(auth_object = nil)
-    %w[name]
+    %w[id name]
   end
   
   def self.ransackable_associations(auth_object = nil)
