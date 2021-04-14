@@ -5,6 +5,7 @@ class ProblemsController < ApplicationController
   def index
     @problems = Problem.all.order(created_at: :desc)
     search_category
+    @results = @p.result.order(created_at: :desc)
   end
 
   def new
