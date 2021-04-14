@@ -1,19 +1,18 @@
 require 'rails_helper'
 
-RSpec.describe "コメント投稿機能", type: :system do
-
+RSpec.describe 'コメント投稿機能', type: :system do
   before do
     @user = FactoryBot.create(:user)
     @problem = FactoryBot.create(:problem)
   end
-  
+
   context '投稿に失敗したとき' do
     it 'コメントが空でメッセージの送信に失敗すること' do
       sign_in(@user)
       click_on(@problem.title)
-      expect {
+      expect do
         find('input[name="commit"]').click
-      }.not_to change { Comment.count }
+      end.not_to change { Comment.count }
       expect(current_path).to eq(problem_path(@problem.id))
     end
   end
@@ -24,9 +23,9 @@ RSpec.describe "コメント投稿機能", type: :system do
       click_on(@problem.title)
       post = 'テスト'
       fill_in 'comment_solution', with: post
-      expect {
+      expect do
         find('input[name="commit"]').click
-      }.to change { Comment.count }.by(1)
+      end.to change { Comment.count }.by(1)
       expect(current_path).to eq(problem_path(@problem.id))
       expect(page).to have_content(post)
     end
@@ -36,13 +35,11 @@ RSpec.describe "コメント投稿機能", type: :system do
       click_on(@problem.title)
       image_path = Rails.root.join('public/images/test_img.png')
       attach_file('comment[image]', image_path, make_visible: true)
-      expect {
+      expect do
         find('input[name="commit"]').click
-      }.to change { Comment.count }.by(1)
+      end.to change { Comment.count }.by(1)
       expect(current_path).to eq(problem_path(@problem.id))
       expect(page).to have_selector('img')
     end
-    
   end
-  
 end

@@ -1,7 +1,6 @@
 class ProblemsController < ApplicationController
-
   before_action :search_category, only: [:index, :search]
-  
+
   def index
     @problems = Problem.all.order(created_at: :desc)
     search_category
@@ -35,7 +34,7 @@ class ProblemsController < ApplicationController
   def search
     @results = @p.result.order(created_at: :desc)
   end
-  
+
   private
 
   def problem_params
@@ -45,5 +44,4 @@ class ProblemsController < ApplicationController
   def search_category
     @p = Problem.ransack(params[:q])
   end
-  
 end
