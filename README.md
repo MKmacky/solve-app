@@ -91,7 +91,7 @@ b3dcd1ca4bd3429f7ea609c0107afc4d)
 
 # ローカルでの動作方法
 
-$ git clone 
+$ git clone https://github.com/MKmacky/solve-app
 </br>
 $ cd solve-app
 </br>
