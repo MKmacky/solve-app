@@ -178,7 +178,7 @@
 .title-contents {
   width: 100%;
   height: 1000px;
-  background-image: url('problem-image.png');
+  background-image: url('/images/problem-image.png');
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: top center;
