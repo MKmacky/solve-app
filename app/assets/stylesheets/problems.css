@@ -82,6 +82,15 @@
   position: fixed;
 }
 
+.chat-room-header {
+  height: 100px;
+  width: 100%;
+  padding: 0 60px;
+  display: flex;
+  justify-content: space-between;
+  background-color: whitesmoke;
+}
+
 .title {
   font-size: 24px;
   margin-top: 36px;
@@ -105,12 +114,12 @@
 }
 
 .header-button {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .header-button a {
-  text-decoration: none;
-  padding: 20px;
+  display: inline-block;
+  padding: 20px 20px;
   color: #fff;
   background-color: #38aef0;
   border: 0;
@@ -135,7 +144,6 @@
 .problem-content {
   height: 130px;
   padding: 10px;
-  margin-top: 100px;
   background-color:#FAFAFA;
   color: dimgray;
 }
